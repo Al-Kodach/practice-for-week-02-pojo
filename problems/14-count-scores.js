@@ -28,7 +28,19 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
 function countScores(people) {
-  // Your code here
+  let sumScoresObj = {};
+
+  people.forEach(person => {
+    let { name, score } = person;
+
+    if(sumScoresObj[name] === undefined) {
+      sumScoresObj[name] = score;
+    } else {
+      sumScoresObj[name] = sumScoresObj[name] + score;
+    }
+  })
+
+  return sumScoresObj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
