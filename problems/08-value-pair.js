@@ -11,7 +11,11 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
 function valuePair(obj1, obj2, key) {
-  // Your code here
+  let keys1 = Object.keys(obj1).filter(el => el === key);
+  let keys2 = Object.keys(obj2).filter(el => el === key);
+
+  return [obj1[keys1], obj2[keys2]]
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
